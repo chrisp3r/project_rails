@@ -6,22 +6,7 @@ class ArticlesControllerTest < ActionController::TestCase
   # end
 
   test "should get index" do
-    get :index, :id => 1
-    assert_response :success
-  end
-
-  test "should get show article" do
-    get :show, @article.find(1) #?
-    assert_response :success
-  end
-
-  test "should get new article" do
-    #get :new, :id => 1
-    assert_response :success
-  end
-
-  test "should post create article" do
-    #post :create, @article[:title] => "test"
+    get articles_url
     assert_response :success
   end
 end
