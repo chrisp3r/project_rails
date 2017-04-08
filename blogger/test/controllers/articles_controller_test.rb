@@ -11,7 +11,7 @@ class ArticlesControllerTest < ActionController::TestCase
   end
 
   test "should get show article" do
-    get :show, :id => 1
+    get :show, @article.find(1) #?
     assert_response :success
   end
 
