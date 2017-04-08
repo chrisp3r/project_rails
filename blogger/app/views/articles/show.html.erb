@@ -6,3 +6,5 @@
 <br />
 <%= link_to "Delete Article", article_path(@article), method: :delete,
         data: {confirm: "Do you really want to delete this article?"} %>
+
+<%= link_to "edit", edit_article_path(@article) %>
