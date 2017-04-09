@@ -10,6 +10,12 @@ class ArticlesController < ApplicationController
     @comment = Comment.new
     #@comment = @article.comments.new #adds extra blank comment to show
     @comment.article_id = @article.id
+
+    # if no article with params[:id] exists:
+    rescue ActiveRecord::RecordNotFound
+      flash.notice = "Article not found"
+      redirect_to articles_path
+      # redirect_to :back
   end
 
   def new
